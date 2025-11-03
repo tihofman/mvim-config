@@ -1,8 +1,28 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+
+    -- Web (HTML/CSS/JS/TS)
+    css = { "prettier" },
+    html = { "prettier" },
+    javascript = { "prettier" },
+    typescript = { "prettier" },
+    javascriptreact = { "prettier" },
+    typescriptreact = { "prettier" },
+
+    -- Vue/Nuxt
+    vue = { "prettier" },
+
+    -- Rust
+    rust = { "rustfmt" },
+
+    -- SQL
+    sql = { "sql_formatter" },
+
+    -- Config/Data
+    json = { "prettier" },
+    yaml = { "prettier" },
+    markdown = { "prettier" },
   },
 
   -- format_on_save = {
