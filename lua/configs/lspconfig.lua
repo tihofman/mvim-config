@@ -8,7 +8,7 @@ local servers = {
 
   -- JavaScript/TypeScript/Node
   "ts_ls",  -- TypeScript/JavaScript
-  "volar",  -- Vue/Nuxt
+  "vue_ls",  -- Vue/Nuxt
 
   -- Java/JVM
   "jdtls",
@@ -23,15 +23,4 @@ local servers = {
 
 vim.lsp.enable(servers)
 
--- Vue/Nuxt configuration (Volar)
-vim.lsp.config.volar = {
-  cmd = { "vue-language-server", "--stdio" },
-  filetypes = { "vue" },
-  init_options = {
-    typescript = {
-      tsdk = vim.fn.expand("~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib"),
-    },
-  },
-}
-
--- read :h vim.lsp.config for changing options of lsp servers 
+-- read :h vim.lsp.config for changing options of lsp servers
