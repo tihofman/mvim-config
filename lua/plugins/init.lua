@@ -6,9 +6,17 @@ return {
   },
   {
     'nvim-java/nvim-java',
-    config = function ()
-      require('java').setup()
-    end
+    lazy = false,  -- Load on startup (patch is applied in init.lua)
+    dependencies = {
+      'nvim-java/lua-async-await',
+      'nvim-java/nvim-java-core',
+      'nvim-java/nvim-java-test',
+      'nvim-java/nvim-java-dap',
+      'nvim-java/nvim-java-refactor',
+      'MunifTanjim/nui.nvim',
+      'neovim/nvim-lspconfig',
+      'mfussenegger/nvim-dap',
+    },
   },
   {
     'mrcjkb/rustaceanvim',
